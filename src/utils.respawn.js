@@ -17,7 +17,7 @@ module.exports = {
 
         var screeps = _.filter(Game.creeps, (creep) => creep.memory.role === role);
 
-        if(screeps.length < 2) {
+        if(screeps.length < limit) {
             var newName = `${role}-${Game.time}`;
             // console.log(`Spawning new ${role}: ${newName}`);
             Game.spawns[SPAWN_1].spawnCreep(body, newName,
