@@ -1,8 +1,7 @@
-var roleHarvester = require('./role/harvester');
-var roleBuilder = require('./role/builder');
-var roleUpgrader = require('./role/upgrader');
-var respawn = require("./utils/respawn");
-var _ = require("lodash");
+var roleHarvester = require('role.harvester');
+var roleBuilder = require('role.builder');
+var roleUpgrader = require('role.upgrader');
+var respawn = require("utils.respawn");
 
 const ROLE = {
     HARVESTER: 'harvester',
