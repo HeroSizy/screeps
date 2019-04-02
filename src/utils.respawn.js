@@ -1,4 +1,4 @@
-import * as _ from "lodash";
+const _ = require("lodash");
 
 const SPAWN_1 = "Spawn1";
 

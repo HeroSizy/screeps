@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="accf1a1d-6b87-48eb-a38a-be077eec36b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role.builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/role.builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.respawn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.respawn.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils.respawn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -92,6 +91,7 @@
         <option value="$PROJECT_DIR$/src/utils/respawn.js" />
         <option value="$PROJECT_DIR$/src/role/role.builder.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/utils.respawn.js" />
       </list>
     </option>
   </component>
@@ -165,12 +165,12 @@
       <workItem from="1554209536118" duration="43000" />
       <workItem from="1554209665455" duration="17000" />
       <workItem from="1554209818964" duration="2520000" />
-      <workItem from="1554221628454" duration="3277000" />
+      <workItem from="1554221628454" duration="3324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5857000" />
+    <option name="totallyTimeSpent" value="5904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2553" y="-886" width="1319" height="1465" extended-state="0" />
@@ -231,6 +231,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/role.builder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -254,15 +261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils.respawn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
