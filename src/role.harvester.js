@@ -23,6 +23,10 @@ var roleHarvester = {
                 }
             }
         }
+    },
+
+    count: function() {
+        return _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester').length;
     }
 };
 

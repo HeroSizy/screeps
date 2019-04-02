@@ -14,10 +14,16 @@ module.exports.loop = function () {
     respawn.removeDeadFromMemory();
 
     respawn.respawnUnderLimit(4,ROLE.HARVESTER);
-    respawn.respawnUnderLimit(2,ROLE.BUILDER);
-    respawn.respawnUnderLimit(5,ROLE.UPGRADER);
 
-    respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
+    if(roleHarvester.count() > 2) {
+        respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
+        respawn.respawnUnderLimit(2,ROLE.BUILDER);
+        respawn.respawnUnderLimit(5,ROLE.UPGRADER);
+    }
+
+    respawn.respawnHero("SuperHarvester", ROLE.HARVESTER,
+        [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
+
 
 
     _.forEach(Game.creeps, creep => {
