@@ -10,8 +10,6 @@ const ROLE = {
     UPGRADER: 'upgrader',
 }
 
-export const SPAWN_1 = "Spawn1";
-
 module.exports.loop = function () {
 
     respawn.removeDeadFromMemory();

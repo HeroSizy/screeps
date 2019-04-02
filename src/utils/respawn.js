@@ -1,5 +1,6 @@
 import * as _ from "lodash";
-import { SPAWN_1 } from "../main";
+
+const SPAWN_1 = "Spawn1";
 
 module.exports = {
 
