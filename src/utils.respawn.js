@@ -5,7 +5,7 @@ const SPAWN_1 = "Spawn1";
 module.exports = {
 
     removeDeadFromMemory: function() {
-        _.forEach(Object.keys(Memory.creeps), name => {
+        _.forEach(Object.keys(Memory.creeps || {}), name => {
             if(!Game.creeps[name]) {
                 delete Memory.creeps[name];
                 console.log('Clearing non-existing creep memory:', name);

@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils.respawn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            <state relative-caret-position="140">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -165,12 +165,12 @@
       <workItem from="1554209536118" duration="43000" />
       <workItem from="1554209665455" duration="17000" />
       <workItem from="1554209818964" duration="2520000" />
-      <workItem from="1554221628454" duration="3324000" />
+      <workItem from="1554221628454" duration="3375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5904000" />
+    <option name="totallyTimeSpent" value="5955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2553" y="-886" width="1319" height="1465" extended-state="0" />
@@ -261,8 +261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils.respawn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        <state relative-caret-position="140">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
         </state>
       </provider>
     </entry>
