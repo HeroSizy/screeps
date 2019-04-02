@@ -19,7 +19,7 @@ module.exports = {
 
         if(screeps.length < 2) {
             var newName = `${role}-${Game.time}`;
-            console.log(`Spawning new ${role}: ${newName}`);
+            // console.log(`Spawning new ${role}: ${newName}`);
             Game.spawns[SPAWN_1].spawnCreep(body, newName,
                 {memory: {role: role}});
         }
