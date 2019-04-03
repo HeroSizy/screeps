@@ -11,7 +11,11 @@ module.exports = {
         })
     },
 
-    respawnUnderLimit: function (limit, role, body = [WORK, WORK, WORK, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE]) {
+    respawnUnderLimit: function (limit, role,
+                                 body = [WORK, WORK, WORK,
+                                     CARRY, CARRY, CARRY,
+                                     MOVE, MOVE, MOVE,
+                                     MOVE, MOVE, MOVE]) {
 
         var screeps = _.filter(Game.creeps, (creep) => creep.memory.role === role);
 

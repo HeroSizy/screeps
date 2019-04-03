@@ -13,11 +13,30 @@ module.exports.loop = function () {
 
     respawn.removeDeadFromMemory();
 
+    var tower = Game.getObjectById('5ca49df379bf3f523bc3bb90');
+    if(tower) {
+        var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
+            filter: (structure) => structure.hits < structure.hitsMax
+        });
+        if(closestDamagedStructure) {
+            tower.repair(closestDamagedStructure);
+        }
+
+        var closestHostile = tower.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
+        if(closestHostile) {
+            tower.attack(closestHostile);
+        }
+    }
+
 
     respawn.respawnHero("SuperBuilder", ROLE.HARVESTER,
         [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
 
-    respawn.respawnUnderLimit(7,ROLE.HARVESTER);
+    respawn.respawnUnderLimit(7,ROLE.HARVESTER,[
+        WORK, WORK, WORK, WORK,
+        CARRY, CARRY, CARRY, CARRY,
+        MOVE, MOVE, MOVE, MOVE
+    ]);
 
     if(roleHarvester.count() > 4) {
         respawn.respawnUnderLimit(7,ROLE.UPGRADER);
