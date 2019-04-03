@@ -41,6 +41,12 @@ var roleHarvester = {
                         creep.memory.harvesting = true;
                         break;
                 }
+                break;
+            default:
+                creep.moveTo(targets[creep.room.find(
+                    FIND_STRUCTURES,
+                    { filter: (structure) => structure.structureType === STRUCTURE_SPAWN })[0]],
+                    {visualizePathStyle: {stroke: '#ffffff'}});
         }
     },
 
