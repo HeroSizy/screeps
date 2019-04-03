@@ -15,9 +15,7 @@ module.exports.loop = function () {
 
     var tower = Game.getObjectById('5ca49df379bf3f523bc3bb90');
     if(tower) {
-        var closestDamagedStructures = tower.room(FIND_STRUCTURES, {
-            filter: (structure) => structure.hits < structure.hitsMax
-        });
+        var closestDamagedStructures = tower.pos.findInRangeStructures(FIND_STRUCTURES,0);
 
         _.minBy(closestDamagedStructures, structures => structures.hits)
         if(closestDamagedStructure) {
