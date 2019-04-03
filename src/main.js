@@ -24,14 +24,14 @@ module.exports.loop = function () {
         respawn.respawnUnderLimit(5,ROLE.BUILDER);
     }
 
-    respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
-    respawn.respawnHero("SuperUpgrader2", ROLE.UPGRADER);
-
-    respawn.respawnHero("SuperBuilder", ROLE.HARVESTER,
-        [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
-
-    respawn.respawnHero("SuperHarvester", ROLE.HARVESTER,
-        [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
+    // respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
+    // respawn.respawnHero("SuperUpgrader2", ROLE.UPGRADER);
+    //
+    // respawn.respawnHero("SuperBuilder", ROLE.HARVESTER,
+    //     [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
+    //
+    // respawn.respawnHero("SuperHarvester", ROLE.HARVESTER,
+    //     [WORK, WORK, WORK, CARRY, CARRY, MOVE]);
 
     _.forEach(Game.creeps, creep => {
         if(creep.memory.role === ROLE.HARVESTER) {
