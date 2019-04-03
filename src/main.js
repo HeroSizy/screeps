@@ -20,10 +20,12 @@ module.exports.loop = function () {
     respawn.respawnUnderLimit(7,ROLE.HARVESTER);
 
     if(roleHarvester.count() > 4) {
-        respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
         respawn.respawnUnderLimit(7,ROLE.UPGRADER);
         respawn.respawnUnderLimit(5,ROLE.BUILDER);
     }
+
+    respawn.respawnHero("SuperUpgrader", ROLE.UPGRADER);
+    respawn.respawnHero("SuperUpgrader2", ROLE.UPGRADER);
 
     respawn.respawnHero("SuperBuilder", ROLE.HARVESTER,
         [WORK, WORK, WORK, CARRY, CARRY, MOVE]);

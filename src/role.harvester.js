@@ -18,8 +18,12 @@ var roleHarvester = {
                 }
             });
             if(targets.length > 0) {
-                if(creep.transfer(targets[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                switch (creep.transfer(targets[0], RESOURCE_ENERGY)) {
+                    case ERR_NOT_IN_RANGE:
+                        creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                        break;
+                    case ERR_FULL:
+                        creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#00FFFF'}});
                 }
             }
         }
