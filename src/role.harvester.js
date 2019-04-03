@@ -6,6 +6,19 @@ var roleHarvester = {
         if(creep.memory.harvesting === undefined) { creep.memory.harvesting = false }
         if(creep.carry.energy === creep.carryCapacity) { creep.memory.harvesting = false }
 
+        let targets;
+
+        const initializeTargets = () => {
+            targets = creep.room.find(FIND_STRUCTURES, {
+                filter: (structure) => {
+                    return (structure.structureType === STRUCTURE_EXTENSION ||
+                        structure.structureType === STRUCTURE_SPAWN ||
+                        structure.structureType === STRUCTURE_TOWER)
+                        && structure.energy < structure.energyCapacity;
+                }
+            });
+        };
+
         switch(true) {
             case (!creep.memory.harvesting && creep.carry.energy === 0) ||
                  (creep.memory.harvesting && creep.carry.energy < creep.carryCapacity):
@@ -17,15 +30,7 @@ var roleHarvester = {
                 break;
 
             case (!creep.memoryharvesting && creep.carry.energy > 0) :
-                var targets = creep.room.find(FIND_STRUCTURES, {
-                    filter: (structure) => {
-                        return (structure.structureType === STRUCTURE_EXTENSION ||
-                            structure.structureType === STRUCTURE_SPAWN ||
-                            structure.structureType === STRUCTURE_TOWER)
-                            && structure.energy < structure.energyCapacity;
-                    }
-                });
-
+                initializeTargets()
                 creep.memory.target = creep.memory.target % targets.length;
                 const status = creep.transfer(targets[creep.memory.target], RESOURCE_ENERGY)
 
@@ -43,6 +48,7 @@ var roleHarvester = {
                 }
                 break;
             default:
+                initializeTargets()
                 creep.moveTo(targets[creep.room.find(
                     FIND_STRUCTURES,
                     { filter: (structure) => structure.structureType === STRUCTURE_SPAWN })[0]],

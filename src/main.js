@@ -15,7 +15,7 @@ module.exports.loop = function () {
 
     var tower = Game.getObjectById('5ca49df379bf3f523bc3bb90');
     if(tower) {
-        var closestDamagedStructures = tower.room.find(FIND_STRUCTURES, structure => structure.hits < structure.hitsMax);
+        var closestDamagedStructures = tower.room.find(FIND_STRUCTURES, { filter: structure => structure.hits < structure.hitsMax });
         let closestDamagedStructure = {hits: Number.MAX_VALUE};
         _.forEach(closestDamagedStructures, structure => {
             if(structure.hits < closestDamagedStructure.hits) {
