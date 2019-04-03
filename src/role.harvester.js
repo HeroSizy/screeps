@@ -3,7 +3,8 @@ var roleHarvester = {
     /** @param {Creep} creep **/
     run: function(creep) {
         if(creep.memory.target === undefined) { creep.memory.target = 0 }
-        if(creep.memory.harvesting === undefined) { creep.harvesting = false }
+        if(creep.memory.harvesting === undefined) { creep.memory.harvesting = false }
+        if(creep.carry.energy === creep.carryCapacity) { creep.memory.harvesting = false }
 
         switch(true) {
             case (!creep.memory.harvesting && creep.carry.energy === 0) ||
