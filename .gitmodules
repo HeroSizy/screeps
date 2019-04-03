@@ -1,2 +1,5 @@
 [submodule "ScreepsAutocomplete"]
 	url = https://github.com/Garethp/ScreepsAutocomplete
+[submodule "TooAngelScreeps"]
+	path = TooAngelScreeps
+	url = https://github.com/TooAngel/screeps
